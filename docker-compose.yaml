@@ -1,0 +1,49 @@
+services:
+  yolo_client_frontend:
+    build:
+      context: client
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: always
+    networks:
+      - yolo_net
+    depends_on:
+      - yolo_backend
+  
+  yolo_backend:
+    restart: always
+    build: 
+      context: backend
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - MONGO_URI=mongodb://mongo_db:27017/yolomy
+    depends_on:
+      - mongo_db
+    networks:
+      - yolo_net
+    ports:
+      - 5000:5000
+    
+  mongo_db:
+    restart: always
+    image: mongo:4.2.0
+    volumes:
+      - data:/data/db
+    networks:
+      - yolo_net
+    ports:
+      - 27016:27017
+  
+networks: 
+  yolo_net:
+    driver: bridge
+
+volumes:
+  data:
+    driver: local
