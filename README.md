@@ -36,7 +36,7 @@ Define services and their configurations in the docker-compose.yml file.
 
 Specify image names or build contexts for each service.
 
-Configure volumes, networks, and environment variables as needed.
+Configure volumes, networks, and environment variables as needed. In this case the newtork created was yolo_net where all the services communicate with each other and the volume created was data for the mongodb
 
 Define ports mappings for accessing services externally.
 
