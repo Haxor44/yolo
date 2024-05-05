@@ -27,3 +27,8 @@ During the implementation, I ensured successful running of the applications by t
 #### 7. Docker Image Tag Naming Standards
 
 For Docker image tagging, I followed the Semantic Versioning (SemVer) format. This format consists of three numbers separated by dots: MAJOR.MINOR.PATCH. Each number represents a specific type of change in the software. Adhering to SemVer standards allows for easy identification and management of Docker images and containers, ensuring consistency and clarity across development, testing, and deployment environments.
+
+#### Screenshots of docker images
+file:///home/haxor/Pictures/Screenshots/backend.png
+file:///home/haxor/Pictures/Screenshots/client.png
+
