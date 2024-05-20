@@ -1,0 +1,8 @@
+---
+# tasks file for run-app
+- name: deploy Docker Compose stack
+  community.docker.docker_compose_v2:
+    project_src: /home/vagrant/projects/
+    files:
+      - docker-compose.yaml
+   
