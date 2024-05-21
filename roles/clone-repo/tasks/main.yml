@@ -3,6 +3,6 @@
 - name: Clone the repository
   git:
     repo: https://github.com/Haxor44/yolo
-    dest: /home/vagrant/projects
+    dest: /home/vagrant/projects/
     clone: yes
     update: yes

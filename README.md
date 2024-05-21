@@ -48,4 +48,47 @@ Verify that all services are running correctly and communicating with each other
 
 Test the application's functionality thoroughly.
 
+# Stage 1 Using Ansible and Vagrant
+This repository provides a solution to automate the provisioning of  resources using vagrant and the subsequent configuration of these resources using vagrant and Ansible and is triggered from a single Ansible playbook or using vagrant up.
 
+# Stage 2 Implementation of Ansible And Terraform
+This repository provides a solution to automate the provisioning of cloud resources using Terraform(optional) and the subsequent configuration of these resources using Ansible, all triggered from a single Ansible playbook.
+
+## Prerequisites
+### Before you begin, ensure you have the following installed on your local machine:
+
+### 1. Vagrant
+### 2. Ansible
+
+## Ansible Playbook for setting up docker and clone repository containing web app
+### The Ansible playbook will install docker and docker compose on the vagrant machine and then clone the repository and run the app
+
+### Vagrant in this case was used to port forward ports so that hte app can be accessed from host machine as well as setup the playbook to run
+
+### use vagrant up to run the application.
+
+
+## Prerequisites
+### Before you begin, ensure you have the following installed on your local machine:
+
+### 1. Terraform
+### 2. Ansible
+### 3. Python
+### 4. AWS CLI (if using AWS)
+
+
+## Ansible Playbook for Provisioning and Configuration
+### The Ansible playbook provided in this repository handles both the provisioning of resources using Terraform and the configuration of those resources.
+
+### Update Inventory
+
+#### 1. Before running the playbook, ensure your ansible/inventory.ini file is correctly set up. This file may be dynamically updated during the provisioning process.
+
+#### 2. Run the Ansible Playbook
+#### using the following command ansible-playbook -i hosts -c ssh playbook.yaml
+
+#### The playbook will:
+
+#### Execute Terraform to provision the necessary cloud resources.
+#### Use the output from Terraform to update the Ansible inventory.
+#### Configure the provisioned servers using Ansible roles and tasks
