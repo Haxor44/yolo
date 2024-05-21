@@ -50,10 +50,6 @@ Test the application's functionality thoroughly.
 
 # Stage 1 Using Ansible and Vagrant
 This repository provides a solution to automate the provisioning of  resources using vagrant and the subsequent configuration of these resources using vagrant and Ansible and is triggered from a single Ansible playbook or using vagrant up.
-
-# Stage 2 Implementation of Ansible And Terraform
-This repository provides a solution to automate the provisioning of cloud resources using Terraform(optional) and the subsequent configuration of these resources using Ansible, all triggered from a single Ansible playbook.
-
 ## Prerequisites
 ### Before you begin, ensure you have the following installed on your local machine:
 
@@ -67,6 +63,8 @@ This repository provides a solution to automate the provisioning of cloud resour
 
 ### use vagrant up to run the application.
 
+# Stage 2 Implementation of Ansible And Terraform
+This repository provides a solution to automate the provisioning of cloud resources using Terraform(optional) and the subsequent configuration of these resources using Ansible, all triggered from a single Ansible playbook.
 
 ## Prerequisites
 ### Before you begin, ensure you have the following installed on your local machine:

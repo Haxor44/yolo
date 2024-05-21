@@ -3,7 +3,7 @@
 - block:
     - name: Pull default Docker image
     
-      community.general.docker_image:
+      community.docker.docker_image:
         name: haxor44/yolo-client:v1.0.0
         source: pull
 
