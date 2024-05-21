@@ -1,0 +1,14 @@
+---
+# tasks file for yolo-backend
+- name: Pull default Docker image
+  community.docker.docker_image:
+    name: haxor44/yolo-backend:v1.0.0
+    source: pull
+
+- name: Create yolo backend container
+  community.docker.docker_container:
+    name: yolo-backend
+    image: haxor44/yolo-backend:v1.0.0
+    state: present
+    ports:
+          - "5000:5000"

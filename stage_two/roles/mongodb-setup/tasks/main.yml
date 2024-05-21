@@ -1,0 +1,30 @@
+---
+# tasks file for mongodb-setup
+# roles/mongodb/tasks/main.yml
+- block:
+    - name: Import MongoDB public GPG Key
+      shell: curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+
+
+    - name: create mongodb-org-4.4.list
+      file: path=/etc/apt/sources.list.d/mongodb-org-4.4.list state=touch
+
+    - name: Add MongoDB repository into sources list
+      lineinfile: dest=/etc/apt/sources.list.d/mongodb-org-4.4.list line="deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.4 multiverse"
+    
+    - name: run the equivalent of "apt-get update" as a separate step
+      apt: update_cache=yes
+    
+    - name: Install MongoDB package
+      apt: pkg=mongodb-org update_cache=yes
+
+    - name: Start and enable MongoDB service
+      service:
+        name: mongod
+        state: started
+        enabled: yes
+
+
+  become: yes
+
+

@@ -1,0 +1,18 @@
+- hosts: all
+  become: true
+  remote_user: vagrant
+  vars:
+    node_version: 20
+    mongo_version: 4.4
+  roles:
+    - test-connection
+    - setup-docker
+    - yolo-frontend
+    - yolo-backend
+    
+    
+
+ 
+    
+    
+    

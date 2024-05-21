@@ -1,0 +1,15 @@
+---
+# tasks file for clone-repo
+- name: Create stage_two directory
+  ansible.builtin.file:
+    path: /home/vagrant/projects/stage_two
+    state: directory
+
+- name: Clone the repository
+  git:
+    repo: https://github.com/Haxor44/yolo/
+    dest: /home/vagrant/projects/stage_two/
+    clone: yes
+    update: yes
+    force: yes
+    
