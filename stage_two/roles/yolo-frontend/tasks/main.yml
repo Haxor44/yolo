@@ -1,17 +1,25 @@
 ---
 # tasks file for yolo-frontend
-- block:
-    - name: Pull default Docker image
-    
-      community.docker.docker_image:
-        name: haxor44/yolo-client:v1.0.0
-        source: pull
+- name: Install app dependencies defined in package.json.
+  npm: "path={{ yolo_client_location }}"
 
-    - name: Create yolo frontend client container
-      community.docker.docker_container:
-        name: yolo-client
-        image: haxor44/yolo-client:v1.0.0
-        state: present
-        ports:
-              - "3000:3000"
-  become: yes
+  # shell: | 
+  #   chdir=/home/vagrant/projects/stage_two/client/   
+  #   npm install 
+- name: "Install forever (to run Node.js app)."
+  npm: name=forever global=yes state=present
+
+- name: "Check list of Node.js apps running."
+  command: forever list
+  register: forever_list
+  changed_when: false
+
+# - name: "Start example Node.js app."
+#   command: 
+ 
+
+
+- name: Start client Node.js app.
+  shell: | 
+    chdir={{ yolo_client_location }}
+    forever start -c "npm start" ./

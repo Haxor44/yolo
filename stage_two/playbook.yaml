@@ -4,9 +4,14 @@
   vars:
     node_version: 20
     mongo_version: 4.4
+    yolo_client_location: /home/vagrant/projects/stage_two/client/
+    yolo_backend_location: /home/vagrant/projects/stage_two/backend/
+    
   roles:
     - test-connection
-    - setup-docker
+    - npm-install
+    - mongodb-setup
+    - clone-repo
     - yolo-frontend
     - yolo-backend
     
