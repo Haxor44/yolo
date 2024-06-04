@@ -1,3 +1,26 @@
+### Explantion for  Deployment of microservices on kubernetes cluster in GCP
+
+#### Overview
+This project demonstrates containerization with Docker and deployment on a Kubernetes cluster. Below is a detailed explanation of the project structure, components, and deployment process. 
+
+#### Backend
+src/: Contains the application code for the Node.js backend.
+Dockerfile: Docker configuration file for the backend container.
+package.json: Node.js dependencies and scripts.
+
+#### Frontend
+src/: Contains the application code for the React frontend.
+Dockerfile: Docker configuration file for the frontend container.
+package.json: Node.js dependencies and scripts.
+
+#### Kubernetes Manifests (k8s/)
+backend.yaml: Kubernetes Deployment configuration for the backend service.
+service-backend.yaml: Kubernetes Service configuration for exposing the backend.
+client.yaml: Kubernetes Deployment configuration for the frontend service.
+service-client.yaml: Kubernetes Service configuration for exposing the frontend.
+mongodb.yaml: Kubernetes Deployment configuration for the MongoDB database.
+db-service.yaml: Kubernetes Service configuration for the MongoDB database.
+
 ### Explanation for Implementation Decisions
 
 #### 1. Choice of Base Image
