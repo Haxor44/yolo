@@ -14,9 +14,10 @@ spec:
       containers:
       - name: client
         image: haxor44/yolo-client:v1.0.0
+        tty: true
         resources:
           limits:
             memory: "512Mi"
             cpu: "900m"
         ports:
-        - containerPort: 3000
+        - containerPort: 80
