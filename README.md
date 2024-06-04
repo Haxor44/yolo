@@ -1,3 +1,31 @@
+# Deploment of microservices on kubernetes cluster in GCP
+
+## Overview
+This project is a full-stack application that uses a React frontend, a Node.js backend, and MongoDB for data storage. The application is containerized using Docker and deployed on a Kubernetes cluster.
+
+## Features
+React Frontend: Responsive UI built with React.
+Node.js Backend: RESTful API services.
+MongoDB: NoSQL database for data storage.
+Docker: Containerization for all services.
+Kubernetes: Deployment and orchestration.
+
+## Prerequisites
+Docker
+Kubernetes (Minikube or a cloud provider)
+Node.js (for local development)
+MongoDB (for local development)
+
+### Installation
+git clone https://github.com/haxor44/yolo.git
+cd yolo
+
+### Usage
+### Ensure your Kubernetes cluster is up and running. You can use Minikube for local development:
+cd Kubernetes
+kubectl apply -f .
+
+
 # Prerequisites
 Ensure you have Docker and docker-compose installed on your system. If not, follow the official Docker documentation for installation instructions.
 
@@ -49,4 +77,5 @@ Verify that all services are running correctly and communicating with each other
 Test the application's functionality thoroughly.
 
 
-
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
