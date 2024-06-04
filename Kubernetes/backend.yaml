@@ -16,7 +16,7 @@ spec:
         image: haxor44/yolo-backend:v1.0.0
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "512Mi"
+            cpu: "900m"
         ports:
         - containerPort: 5000
