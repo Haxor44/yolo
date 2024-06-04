@@ -1,4 +1,4 @@
-# Deploment of microservices on kubernetes cluster in GCP
+# Deployment of microservices on kubernetes cluster in GCP
 
 ## Overview
 This project is a full-stack application that uses a React frontend, a Node.js backend, and MongoDB for data storage. The application is containerized using Docker and deployed on a Kubernetes cluster.
@@ -24,7 +24,6 @@ cd yolo
 ### Ensure your Kubernetes cluster is up and running. You can use Minikube for local development:
 cd Kubernetes
 kubectl apply -f .
-
 
 # Prerequisites
 Ensure you have Docker and docker-compose installed on your system. If not, follow the official Docker documentation for installation instructions.
@@ -79,3 +78,5 @@ Test the application's functionality thoroughly.
 
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Thank you Kadima!!!
