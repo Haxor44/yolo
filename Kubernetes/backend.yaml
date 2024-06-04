@@ -13,13 +13,14 @@ spec:
     spec:
       containers:
       - name: backend
-        image: haxor44/yolo-backend:v1.0.0
+        image: haxor44/yolo-backend:latest
         env:
-          - name: "DBHOST"
-            value: db-service
+        - name: "MONGODB_URI"
+          value: dbservice
         resources:
           limits:
             memory: "512Mi"
             cpu: "900m"
         ports:
         - containerPort: 5000
+        

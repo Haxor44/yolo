@@ -3,10 +3,12 @@ kind: Service
 metadata:
   name: yolo-client-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: client
   ports:
   - port: 3000
     targetPort: 3000
+    nodePort: 30500
+    protocol: TCP
     

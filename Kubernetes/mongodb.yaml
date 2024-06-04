@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mongo_db
+      app: mongo
   template:
     metadata:
       labels:
-        app: mongo_db
+        app: mongo
     spec:
       containers:
-      - name: mongo_db
-        image: mongo:4.4
+      - name: mongo
+        image: mongo:4.2
         resources:
           limits:
             memory: "512Mi"

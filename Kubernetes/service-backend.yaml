@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: yolo-backend-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: backend
   ports:
   - port: 5000
     targetPort: 5000
+    nodePort: 31500
+    protocol: TCP
