@@ -3,8 +3,9 @@ kind: Service
 metadata:
   name: db-service
 spec:
+  type: ClusterIP
   selector:
-    app: mongodb
+    app: mongo_db
   ports:
   - port: 27017
     targetPort: 27017

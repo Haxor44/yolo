@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-deploment
+  name: mongodb-deployment
 spec:
   selector:
     matchLabels:
-      app: mongodb
+      app: mongo_db
   template:
     metadata:
       labels:
-        app: mongodb
+        app: mongo_db
     spec:
       containers:
-      - name: mongodb
+      - name: mongo_db
         image: mongo:4.4
         resources:
           limits:
